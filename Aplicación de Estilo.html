@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hall of Rock</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    h1,
+    h2,
+    p,
+    li {
+      font-family: 'Copperplate Gothic';
+    }
+
+    h3,
+    h5 {
+      font-family: 'Rock Salt'
+    }
+
+    /* Menú flotante */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 0 10px #555;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white !important;
+      font-weight: bold;
+      font-family: 'Copperplate Gothic';
+    }
+
+    .navbar a:hover {
+      color: #ccc !important;
+    }
+
+    /* Sección de inicio */
+    #inicio {
+      background: url("fondo1.jpg") no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 6px #000;
+      background-attachment: fixed;
+    }
+
+    #inicio h1 {
+      font-size: 3rem;
+    }
+
+    /* Carousel */
+    #bandas {
+      background-color: black;
+      padding: 60px 0;
+      height: 100vh;
+      padding-top: 75px
+    }
+
+    .carousel-item img {
+      width: 600px;
+      height: 600px;
+      border-radius: 10px;
+      border: 2px solid white;
+      box-shadow: 0 0 15px #555;
+      cursor: pointer;
+    }
+
+    /* Álbumes */
+    #albumes {
+      background: url("fondo1.jpg") no-repeat center center;
+      background-size: cover;
+      height: 1500px;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 6px #000;
+      padding-top: 75px
+    }
+
+    .album-card {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 25px auto;
+      width: 90%;
+      max-width: 600px;
+      color: white;
+      box-shadow: 0 0 10px #444;
+    }
+
+    .music-btn {
+      border: none;
+      background: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+    }
+
+    .music-btn:hover {
+      color: white;
+    }
+
+    .modal-content {
+      background-color: #333;
+      color: white;
+      border-radius: 10px;
+    }
+
+    #miImagen {
+      border-radius: 15px;
+      border: 2px solid white;
+    }
+
+    .imagen-recortada {
+      width: 600px;
+      height: 600px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Menú flotante -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#inicio">🎸 THE HALL OF ROCK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon text-white"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bandas">Bandas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#albumes">Álbumes</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Inicio -->
+  <section id="inicio">
+    <h1>🔥 THE HALL OF ROCK 🔥</h1>
+    <p>Donde las leyendas del rock viven para siempre 🤘</p>
+    <img id="miImagen" class="imagen-recortada" src="rock.png" style="max-width:50%;">
+  </section>
+
+  <!-- Bandas -->
+  <section id="bandas" class="text-center">
+    <h2 class="mb-4">Bandas</h2>
+    <div id="carouselBandas" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="b1.jpg" class="d-block mx-auto" alt="Radiohead" data-bs-toggle="modal"
+            data-bs-target="#historiaModal1">
+        </div>
+        <div class="carousel-item">
+          <img src="b2.jpg" class="d-block mx-auto" alt="The Beach Boys" data-bs-toggle="modal"
+            data-bs-target="#historiaModal2">
+        </div>
+        <div class="carousel-item">
+          <img src="b3.jpg" class="d-block mx-auto" alt="The Rolling Stones" data-bs-toggle="modal"
+            data-bs-target="#historiaModal3">
+        </div>
+        <div class="carousel-item active">
+          <img src="b4.jpg" class="d-block mx-auto" alt="Metallica" data-bs-toggle="modal"
+            data-bs-target="#historiaModal4">
+        </div>
+        <div class="carousel-item">
+          <img src="b5.jpg" class="d-block mx-auto" alt="Queen" data-bs-toggle="modal" data-bs-target="#historiaModal5">
+        </div>
+        <div class="carousel-item">
+          <img src="b6.jpg" class="d-block mx-auto" alt="The Beatles" data-bs-toggle="modal"
+            data-bs-target="#historiaModal6">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselBandas" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselBandas" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Álbumes -->
+  <section id="albumes" class="text-center">
+    <h2 class="mb-4">Álbumes</h2>
+
+    <div class="album-card">
+      <p>Radiohead - OK Computer (1997)</p>
+      <img src="musica.png" class="music-btn" data-bs-toggle="modal" data-bs-target="#canciones1">
+    </div>
+
+    <div class="album-card">
+      <p>The Beach Boys - Pet Sounds (1966)</p>
+      <img src="musica.png" class="music-btn" data-bs-toggle="modal" data-bs-target="#canciones2">
+    </div>
+
+    <div class="album-card">
+      <p>The Rolling Stones - Let It Bleed (1969)</p>
+      <img src="musica.png" class="music-btn" data-bs-toggle="modal" data-bs-target="#canciones3">
+    </div>
+
+    <div class="album-card">
+      <p>Metallica - Master of Puppets (1986)</p>
+      <img src="musica.png" class="music-btn" data-bs-toggle="modal" data-bs-target="#canciones4">
+    </div>
+
+    <div class="album-card">
+      <p>Queen - A Night at the Opera (1975)</p>
+      <img src="musica.png" class="music-btn" data-bs-toggle="modal" data-bs-target="#canciones5">
+    </div>
+
+    <div class="album-card">
+      <p>The Beatles - Abbey Road (1969)</p>
+      <img src="musica.png" class="music-btn" data-bs-toggle="modal" data-bs-target="#canciones6">
+    </div>
+
+  </section>
+
+  <!-- Modales de historia -->
+  <div class="modal fade" id="historiaModal1" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h3>Historia de Radiohead</h3>
+        <p>Radiohead es una banda inglesa formada en 1985, reconocida por su estilo alternativo y experimental. Alcanzó
+          la fama con el álbum "OK Computer" (1997), que revolucionó el rock con su sonido melancólico y letras sobre la
+          alienación moderna. Discos como "Kid A" y "In Rainbows" consolidaron su reputación como una de las bandas más
+          innovadoras del rock contemporáneo.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="historiaModal2" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h3>Historia de The Beach Boys</h3>
+        <p>The Beach Boys surgieron en California en 1961, destacando por sus armonías vocales y su estilo surf rock que
+          reflejaba la vida playera. Liderados por Brian Wilson, evolucionaron con el álbum "Pet Sounds" (1966),
+          considerado una obra maestra que influyó incluso a The Beatles. Son un ícono del pop y del espíritu
+          californiano.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="historiaModal3" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h3>Historia de The Rolling Stones</h3>
+        <p>Formados en 1962 en Londres, The Rolling Stones son una de las bandas más longevas e importantes del rock.
+          Con Mick Jagger y Keith Richards al frente, su estilo de rock & blues, su energía y actitud rebelde definieron
+          una generación. Temas como "Satisfaction" y "Paint It Black" los convirtieron en leyendas del rock mundial.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="historiaModal4" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h3>Historia de Metallica</h3>
+        <p>Metallica, fundada en 1981 en California, es una de las bandas más emblemáticas del heavy metal. James
+          Hetfield y Lars Ulrich crearon un estilo potente y veloz que dio forma al thrash metal. Con álbumes como
+          "Master of Puppets" y "The Black Album", llevaron el metal a las masas y se consolidaron como referentes del
+          género.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="historiaModal5" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h3>Historia de Queen</h3>
+        <p>Queen, creada en 1970 en Londres, se caracterizó por su mezcla única de rock, ópera y teatralidad. Con
+          Freddie Mercury como vocalista y Brian May en la guitarra, lograron himnos inmortales como "Bohemian
+          Rhapsody", "We Will Rock You" y "Don’t Stop Me Now". Su creatividad y el carisma de Mercury los convirtieron
+          en una de las bandas más queridas y trascendentes de la historia.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="historiaModal6" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h3>Historia de The Beatles</h3>
+        <p>The Beatles, nacidos en Liverpool en 1960, revolucionaron la música moderna con su evolución constante y su
+          capacidad para innovar. John Lennon, Paul McCartney, George Harrison y Ringo Starr comenzaron con canciones
+          sencillas de rock and roll y luego exploraron sonidos más complejos en discos como "Revolver" y "Abbey Road".
+          Su influencia musical y cultural es inmensa y perdura hasta hoy.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modales de canciones -->
+  <div class="modal fade" id="canciones1" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h5>Canciones - OK Computer (Radiohead)</h5>
+        <ul>
+          <li>Airbag</li>
+          <li>Paranoid Android</li>
+          <li>Subterranean Homesick Alien</li>
+          <li>Exit Music (For a Film)</li>
+          <li>Let Down</li>
+          <li>Karma Police</li>
+          <li>Fitter Happier</li>
+          <li>Electioneering</li>
+          <li>Climbing Up the Walls</li>
+          <li>No Surprises</li>
+          <li>Lucky</li>
+          <li>The Tourist</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="canciones2" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h5>Canciones - Pet Sounds (The Beach Boys)</h5>
+        <ul>
+          <li>Wouldn’t It Be Nice</li>
+          <li>You Still Believe in Me</li>
+          <li>That’s Not Me</li>
+          <li>Don’t Talk (Put Your Head on My Shoulder)</li>
+          <li>I’m Waiting for the Day</li>
+          <li>Let’s Go Away for Awhile</li>
+          <li>Sloop John B</li>
+          <li>God Only Knows</li>
+          <li>I Know There’s an Answer</li>
+          <li>Here Today</li>
+          <li>I Just Wasn’t Made for These Times</li>
+          <li>Pet Sounds</li>
+          <li>Caroline, No</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="canciones3" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h5>Canciones - Let It Bleed (The Rolling Stones)</h5>
+        <ul>
+          <li>Gimme Shelter</li>
+          <li>Love in Vain</li>
+          <li>Country Honk</li>
+          <li>Live with Me</li>
+          <li>Let It Bleed</li>
+          <li>Midnight Rambler</li>
+          <li>You Got the Silver</li>
+          <li>Monkey Man</li>
+          <li>You Can’t Always Get What You Want</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="canciones4" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h5>Canciones - Master of Puppets (Metallica)</h5>
+        <ul>
+          <li>Battery</li>
+          <li>Master of Puppets</li>
+          <li>The Thing That Should Not Be</li>
+          <li>Welcome Home (Sanitarium)</li>
+          <li>Disposable Heroes</li>
+          <li>Leper Messiah</li>
+          <li>Orion</li>
+          <li>Damage, Inc.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="canciones5" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h5>Canciones - A Night at the Opera (Queen)</h5>
+        <ul>
+          <li>Death on Two Legs (Dedicated to...)</li>
+          <li>Lazing on a Sunday Afternoon</li>
+          <li>I’m in Love with My Car</li>
+          <li>You’re My Best Friend</li>
+          <li>’39</li>
+          <li>Sweet Lady</li>
+          <li>Seaside Rendezvous</li>
+          <li>The Prophet’s Song</li>
+          <li>Love of My Life</li>
+          <li>Good Company</li>
+          <li>Bohemian Rhapsody</li>
+          <li>God Save the Queen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="canciones6" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h5>Canciones - Abbey Road (The Beatles)</h5>
+        <ul>
+          <li>Come Together</li>
+          <li>Something</li>
+          <li>Maxwell’s Silver Hammer</li>
+          <li>Oh! Darling</li>
+          <li>Octopus’s Garden</li>
+          <li>I Want You (She’s So Heavy)</li>
+          <li>Here Comes the Sun</li>
+          <li>Because</li>
+          <li>You Never Give Me Your Money</li>
+          <li>Sun King</li>
+          <li>Mean Mr. Mustard</li>
+          <li>Polythene Pam</li>
+          <li>She Came in Through the Bathroom Window</li>
+          <li>Golden Slumbers</li>
+          <li>Carry That Weight</li>
+          <li>The End</li>
+          <li>Her Majesty</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
