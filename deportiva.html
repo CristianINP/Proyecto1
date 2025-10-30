@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendas De Ropa.com - Moda Casual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-bottom: 30px;
+        }
+
+        .main-content-wrapper {
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-categoria-principal {
+            background-color: #DAA267;
+            border: 2px solid black;
+            font-family: 'Grenze';
+            font-size: 200% !important;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px 40px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            width: 300px;
+            text-align: center;
+            display: block;
+        }
+
+        .brand-button {
+            display: flex;
+            align-items: center;
+            background-color: #D9D9D9;
+            border: 2px solid black;
+            width: 500px;
+            height: 90px;
+            margin-bottom: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-family: 'Grenze';
+
+        }
+
+        .brand-button:hover {
+            background-color: #c0c0c0;
+            transform: scale(1.02);
+            color: black;
+
+        }
+
+        .brand-button .brand-logo {
+            height: 60px;
+            margin-right: 20px;
+            object-fit: contain;
+            flex-shrink: 0;
+            width: 150px;
+            text-align: left;
+            border-radius: 90px;
+        }
+
+        .brand-button .brand-name {
+            font-size: 24px;
+            flex-grow: 1;
+            text-align: left;
+
+        }
+
+        .offcanvas.offcanvas-end {
+            width: 250px !important;
+            border-left: 2px solid black;
+        }
+
+        .offcanvas-header-custom {
+            background-color: #DAA267;
+            color: black;
+            font-weight: bold;
+            border-bottom: 2px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .offcanvas-header-custom .btn-close {
+            background-color: black;
+            opacity: 1;
+            border-radius: 0;
+            padding: 5px;
+            font-size: 1rem;
+            line-height: 1;
+        }
+
+        .offcanvas-header-custom .btn-close:before {
+            content: 'X';
+            color: white;
+            font-weight: bold;
+            display: block;
+            line-height: 1;
+            transform: translateY(-2px);
+        }
+
+        .offcanvas-body-custom {
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        .offcanvas-option {
+            display: block;
+            background-color: #D9D9D9;
+            color: black;
+            font-weight: bold;
+            border: 2px solid black;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .offcanvas-option:hover {
+            background-color: #c0c0c0;
+            color: black;
+        }
+
+        .card {
+            width: 600px;
+            height: 650px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-color: white;
+            margin-top: 20px;
+            justify-items: center;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light shadow-sm rounded-3 custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="#">
+                <img src="logo.jpg" alt="Logo" class="navbar-logo">
+            </a>
+
+            <span class="navbar-title" style="font-size: 32px;">Tiendas De Ropa</span>
+
+            <button class="btn btn-dark fw-bold ms-auto me-1" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                MENÚ
+            </button>
+        </div>
+    </nav>
+    <div class="main-content-wrapper">
+        <div class="card text-center">
+            <div class="btn-categoria-principal">Deportiva</div>
+
+            <a href="https://www.nike.com/mx/" target="_blank" class="brand-button">
+                <img src="Nike.jpg" alt="Nike Logo" class="brand-logo">
+                <span class="brand-name">Nike</span>
+            </a>
+
+            <a href="https://www.adidas.mx/" target="_blank" class="brand-button">
+                <img src="Adidas.jpg" alt="Adidas Logo" class="brand-logo">
+                <span class="brand-name">Adidas</span>
+            </a>
+
+            <a href="https://www.newbalancemexico.com/" target="_blank" class="brand-button">
+                <img src="NB.jpg" alt="NB Logo" class="brand-logo">
+                <span class="brand-name">New Balance</span>
+            </a>
+
+            <a href="https://www.underarmour.com.mx/" target="_blank" class="brand-button">
+                <img src="UnderArmour.jpg" alt="Under Armour Logo" class="brand-logo">
+                <span class="brand-name">Under Armour</span>
+            </a>
+
+            <a href="https://mx.puma.com/" target="_blank" class="brand-button">
+                <img src="Puma.jpg" alt="Puma Logo" class="brand-logo">
+                <span class="brand-name">Puma</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header bg-dark text-white">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">MENÚ</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Cerrar (X)"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="Examen Práctico 2do Parcial.html" class="btn btn-outline-dark w-100 mb-2">CERRAR SESIÓN</a>
+            <hr>
+            <h6 class="text-uppercase text-muted mt-3 mb-2">Categorías</h6>
+            <ul class="list-unstyled">
+                <li><a href="Moda casual.html" class="menu-link">Moda Casual</a></li>
+                <li><a href="deportiva.html" class="menu-link">Deportiva</a></li>
+                <li><a href="formal.html" class="menu-link">Formal y de Oficina</a></li>
+                <li><a href="interior_lenceria.html" class="menu-link">Ropa Interior y Lencería</a></li>
+                <li><a href="calzado.html" class="menu-link">Calzado</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
